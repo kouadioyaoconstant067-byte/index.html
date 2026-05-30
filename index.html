@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONSTANT - CV Pro service& Design</title>sss
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 95%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #1a5edb;
+}
+
+a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ Création CV & Design Pro
+</header>
+
+<div class="container">
+
+<img src="image/profil.png" alt="photo de profil">
+
+<div class="card">
+<h2>Bienvenue chez KYC Design 👋</h2>
+<p>Je t'aide à obtenir un CV  professionel pour trouver du travail rapidement et je crée  designs modernes pour ton business.</p>
+<a href="https://wa.me/2250105189669
+" target="_blank">📲 Me contacter sur WhatsApp</a>
+</div>
+
+<div class="card">
+<h2>📩 Commande ton CV & lettres de motivation / Design</h2>
+
+<input id="nom" placeholder="Ton nom complet">
+<input id="email" placeholder="Ton email">
+<textarea id="message" placeholder="Décris ton besoin (CV, logo, design...)" rows="5"></textarea>
+
+<button onclick="sendWhatsApp()">Envoyer la demande</button>
+</div>
+
+<div class="card">
+<h2>💼 Mes services</h2>
+<p>✔ CV professionnel moderne</p>
+<p>✔ lettre de motivation</p>
+<p>✔ Flyers & affiches</p>
+</div>
+
+</div>
+
+<script>
+function sendWhatsApp() {
+  let nom = document.getElementById('nom').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('message').value;
+
+  let url = "https://wa.me/2250105189669?text=" + 
+  "Nom: " + nom + "%0A" +
+  "Email: " + email + "%0A" +
+  "Message: " + message;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
